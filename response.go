@@ -6,8 +6,8 @@ import (
 )
 
 type tokenResponse struct {
-	Status      string `json:"Name"`
-	Message     string `json:"message"`
+	Status      string `"Name"`
+	Message     string `"access_token is issued"`
 	AccessToken string `"Vm7SSB93huTitkRAlq95213229S82QYzNIdn1rJXN4q"`
 }
 
