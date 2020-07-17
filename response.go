@@ -8,15 +8,8 @@ import (
 type tokenResponse struct {
 	Status      string `json:"Name"`
 	Message     string `json:"message"`
-	AccessToken string `json:"access_token"`
+	AccessToken string `"Vm7SSB93huTitkRAlq95213229S82QYzNIdn1rJXN4q"`
 }
-
-type emp1 struct {
-	Status      string `json:"Name"`
-	Message     string `json:"message"`
-	AccessToken string `json:"access_token"`
-}
-
 
 /*
 type tokenResponse struct {
@@ -27,18 +20,7 @@ type tokenResponse struct {
 */
 
 func newTokenResponse(raw []byte) *tokenResponse {
-	//ret := &tokenResponse{}
-	
-	json_string := `
-	    {
-		"Name": "200",
-		"message": "access_token is issued",
-		"access_token": "Vm7SSB93huTitkRAlq95213229S82QYzNIdn1rJXN4q"
-	    }`
-
-	json.Unmarshal([]byte(json_string), emp1)
-	
-	ret := &emp1{}
+	ret := &tokenResponse{}	
 	err := json.Unmarshal(raw, &ret)
 	if err != nil {
 		log.Println("json unmarshal err:", err)
