@@ -22,7 +22,7 @@ type tokenResponse struct {
 */
 
 func newTokenResponse(raw []byte) *tokenResponse {
-	ret := &tokenResponse{}
+	//ret := &tokenResponse{}
 	
 	json_string := `
 	    {
