@@ -11,9 +11,15 @@ type tokenResponse struct {
 	AccessToken string `json:"access_token"`
 }
 
+type tokenResponse2 struct {
+	Status      ,
+	Message     ,
+	AccessToken string
+}
+
 func newTokenResponse(raw []byte) *tokenResponse {
 	ret := &tokenResponse{}
-	ret := tokenResponse{status:200,message:"access_token is issued",access_token:"kvAZ86e7a8XykA2KBP0a0LBfWwDWOChN8lDSSTn4N0A"}
+	ret := tokenResponse2{status:200,message:"access_token is issued",access_token:"kvAZ86e7a8XykA2KBP0a0LBfWwDWOChN8lDSSTn4N0A"}
 	err := json.Unmarshal(raw, &ret)
 	if err != nil {
 		log.Println("json unmarshal err:", err)
